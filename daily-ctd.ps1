@@ -10,5 +10,5 @@ $scriptOutputFile = $pathStr + "daily-ctd-output.txt"
 $null | sc $errorOutputFile
 rm $scriptOutputFile
 
-.\publish\latest\net5.0\M2mMonitor.exe putDbUsagesCtd --putDb --errorOutput=$errorOutputFile 1>$scriptOutputFile
+.\baselines\latest\net5.0\M2mMonitor.exe putDbUsagesCtd --putDb --errorOutput=$errorOutputFile 1>$scriptOutputFile
 

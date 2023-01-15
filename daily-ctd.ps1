@@ -16,8 +16,8 @@ rm $scriptOutputFile
 
 Set-Alias -Name mon -Value .\baselines\latest\net5.0\M2mMonitor.exe
 
-mon putDbUsagesCtd --simStatus=Activated   --NputDb --NskipCtdInsert  --NshowSql --deviceLimit=5 --errorOutput=$errorOutputFile 1>$scriptOutputFile
-mon putDbUsagesCtd --simStatus=Deactivated --NputDb --skipCtdInsert   --NshowSql --deviceLimit=5 --errorOutput=$errorOutputFile 1>>$scriptOutputFile
-mon putDbUsagesCtd --simStatus=Retired     --NputDb --skipCtdInsert   --NshowSql --deviceLimit=5 --errorOutput=$errorOutputFile 1>>$scriptOutputFile
+mon putDbUsagesCtd --simStatus=Activated   --putDb --NskipCtdInsert  --NshowSql --errorOutput=$errorOutputFile 1>$scriptOutputFile
+mon putDbUsagesCtd --simStatus=Deactivated --putDb --skipCtdInsert   --NshowSql --errorOutput=$errorOutputFile 1>>$scriptOutputFile
+mon putDbUsagesCtd --simStatus=Retired     --putDb --skipCtdInsert   --NshowSql --errorOutput=$errorOutputFile 1>>$scriptOutputFile
 
 popd

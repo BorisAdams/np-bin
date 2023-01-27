@@ -39,9 +39,9 @@ rm $scriptOutputFile
 
 Set-Alias -Name mon_wip -Value .\bin\Debug\net5.0\M2MMonitor.exe
 
-mon_wip putDbUsagesCtd --simStatus=Activated   --NputDb --skipCtdInsert   --errorOutput=$errorOutputFile 1>$scriptOutputFile
-mon_wip putDbUsagesCtd --simStatus=Deactivated --NputDb --skipCtdInsert   --errorOutput=$errorOutputFile 1>>$scriptOutputFile
-mon_wip putDbUsagesCtd --simStatus=Retired     --NputDb --skipCtdInsert   --errorOutput=$errorOutputFile 1>>$scriptOutputFile
+mon_wip putDbUsagesCtd --simStatus=Activated   --NputDb --showSql --skipCtdInsert   --errorOutput=$errorOutputFile 1>$scriptOutputFile
+mon_wip putDbUsagesCtd --simStatus=Deactivated --NputDb --showSql --skipCtdInsert   --errorOutput=$errorOutputFile 1>>$scriptOutputFile
+mon_wip putDbUsagesCtd --simStatus=Retired     --NputDb --showSql --skipCtdInsert   --errorOutput=$errorOutputFile 1>>$scriptOutputFile
 
 #next - baseline in git!!!
 
